@@ -1,0 +1,130 @@
+{
+    "nodes": [
+        {
+            "id": "0000000001",
+            "name": "Raj Sharma Family",
+            "gender": "male",
+            "address": "123 Temple St, Chennai",
+            "post": "Family Head",
+            "phone": {
+                "number": "+919876543210",
+                "hasWhatsApp": true
+            },
+            "profession": "Priest",
+            "parentId": null,
+            "children": ["0000000002", "0000000003"]
+        },
+        {
+            "id": "0000000002",
+            "name": "Arun Sharma",
+            "gender": "male",
+            "address": "456 Brahmin St, Mumbai",
+            "post": "Elder Son",
+            "phone": {
+                "number": "+919876543211",
+                "hasWhatsApp": false
+            },
+            "profession": "Teacher",
+            "parentId": "0000000001",
+            "children": ["0000000004"]
+        },
+        {
+            "id": "0000000003",
+            "name": "Priya Sharma",
+            "gender": "female",
+            "address": "789 Park Ave, Delhi",
+            "post": "Daughter",
+            "phone": {
+                "number": "+919876543212",
+                "hasWhatsApp": true
+            },
+            "profession": "Doctor",
+            "parentId": "0000000001",
+            "children": []
+        },
+        {
+            "id": "0000000004",
+            "name": "Vikram Sharma",
+            "gender": "male",
+            "address": "321 Market Rd, Bangalore",
+            "post": "Grandson",
+            "phone": {
+                "number": "+919876543213",
+                "hasWhatsApp": true
+            },
+            "profession": "Engineer",
+            "parentId": "0000000002",
+            "children": []
+        },
+        {
+            "id": "0000000005",
+            "name": "Vikram Verma Family",
+            "gender": "male",
+            "address": "654 Lake View, Pune",
+            "post": "Family Head",
+            "phone": {
+                "number": "+919876543214",
+                "hasWhatsApp": true
+            },
+            "profession": "Businessman",
+            "parentId": null,
+            "children": ["0000000006", "0000000007"]
+        },
+        {
+            "id": "0000000006",
+            "name": "Ananya Verma",
+            "gender": "female",
+            "address": "987 Garden City, Pune",
+            "post": "Daughter",
+            "phone": {
+                "number": "+919876543215",
+                "hasWhatsApp": true
+            },
+            "profession": "Architect",
+            "parentId": "0000000005",
+            "children": []
+        },
+        {
+            "id": "0000000007",
+            "name": "Rahul Verma",
+            "gender": "male",
+            "address": "654 Lake View, Pune",
+            "post": "Son",
+            "phone": {
+                "number": "+919876543216",
+                "hasWhatsApp": false
+            },
+            "profession": "Student",
+            "parentId": "0000000005",
+            "children": []
+        },
+        {
+            "id": "0000000008",
+            "name": "Suresh Iyer Family",
+            "gender": "male",
+            "address": "111 Beach Road, Goa",
+            "post": "Family Head",
+            "phone": {
+                "number": "+919876543217",
+                "hasWhatsApp": true
+            },
+            "profession": "Lawyer",
+            "parentId": null,
+            "children": ["0000000009"]
+        },
+        {
+            "id": "0000000009",
+            "name": "Meena Iyer",
+            "gender": "female",
+            "address": "111 Beach Road, Goa",
+            "post": "Wife",
+            "phone": {
+                "number": "+919876543218",
+                "hasWhatsApp": true
+            },
+            "profession": "Homemaker",
+            "parentId": "0000000008",
+            "children": []
+        }
+    ]
+}

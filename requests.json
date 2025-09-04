@@ -1,0 +1,17 @@
+{
+    "requests": [
+        {
+            "id": "REQ001",
+            "nodeId": "0000000001",
+            "changes": {
+                "address": {
+                    "old": "123 Temple St, Chennai",
+                    "new": "123 Temple St, Chennai - 600001"
+                }
+            },
+            "status": "pending",
+            "requestedBy": "guest",
+            "comments": "Updated postal code"
+        }
+    ]
+}
