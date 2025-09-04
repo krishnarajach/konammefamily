@@ -1,0 +1,202 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.app-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #4a6baf;
+    font-size: 28px;
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-btn, .logout-btn {
+    background-color: #4a6baf;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover, .logout-btn:hover {
+    background-color: #3a5a9f;
+}
+
+.user-info {
+    font-weight: 600;
+    color: #4a6baf;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    gap: 20px;
+}
+
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tree-container {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    min-height: 600px;
+}
+
+.admin-panel {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4a6baf;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3a5a9f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .admin-panel {
+        order: -1;
+    }
+    
+    .modal-content {
+        width: 90%;
+        margin: 15% auto;
+    }
+}
+
+/* Add these styles to ensure proper modal behavior on all screen sizes */
+.modal {
+    padding: 20px 0; /* Add padding to top and bottom of modal overlay */
+}
+
+.modal-content {
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+/* Ensure form fields don't overflow */
+.request-form-fields {
+    max-height: 50vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Custom scrollbar for modal content */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.request-form-fields::-webkit-scrollbar {
+    width: 6px;
+}
+
+.request-form-fields::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.request-form-fields::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.request-form-fields::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

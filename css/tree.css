@@ -1,0 +1,209 @@
+/* Family Tree Styles - Horizontal Layout */
+.tree {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow-x: auto;
+    padding: 20px;
+    min-height: 400px;
+}
+
+.tree ul {
+    list-style-type: none;
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.tree li {
+    position: relative;
+    text-align: center;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tree li::before, .tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 1px solid #ccc;
+    width: 50%;
+    height: 20px;
+}
+
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 1px solid #ccc;
+}
+
+.tree li:only-child::after, .tree li:only-child::before {
+    display: none;
+}
+
+.tree li:only-child {
+    padding-top: 0;
+}
+
+.tree li:first-child::before, .tree li:last-child::after {
+    border: 0 none;
+}
+
+.tree li:last-child::before {
+    border-right: 1px solid #ccc;
+    border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+    border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #ccc;
+    width: 0;
+    height: 20px;
+}
+
+.node {
+    position: relative;
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    min-width: 140px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.node:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.node.male {
+    background-color: #e6f2ff;
+    border: 2px solid #99c2ff;
+    border-radius: 8px;
+    min-width: 180px; /* Increased width to accommodate spouse names */
+}
+
+.node.female {
+    background-color: #ffe6f2;
+    border: 2px solid #ff99cc;
+    border-radius: 50%;
+    width: 160px; /* Increased width */
+    height: 160px; /* Increased height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.node-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.node-name {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.2;
+    word-wrap: break-word;
+    white-space: normal;
+    max-width: 100%; /* Ensure text doesn't overflow */
+}
+
+.node-gender {
+    font-size: 12px;
+    background-color: #f0f0f0;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.icons-container {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.info-icon, .expand-icon {
+    cursor: pointer;
+    font-size: 18px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.info-icon {
+    color: #4a6baf;
+}
+
+.info-icon:hover {
+    background-color: rgba(74, 107, 175, 0.1);
+}
+
+.expand-icon {
+    color: #4a6baf;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.expand-icon:hover {
+    background-color: rgba(74, 107, 175, 0.1);
+}
+
+/* Responsive Tree */
+@media (max-width: 768px) {
+    .tree {
+        padding: 10px;
+        flex-direction: column;
+    }
+    
+    .tree ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tree li {
+        padding: 10px 5px;
+    }
+    
+    .node {
+        min-width: 120px;
+    }
+    
+    .node.male {
+        min-width: 140px; /* Adjusted for mobile */
+    }
+    
+    .node.female {
+        width: 120px; /* Adjusted for mobile */
+        height: 120px; /* Adjusted for mobile */
+    }
+    
+    .node-name {
+        font-size: 14px;
+    }
+    
+    .info-icon, .expand-icon {
+        font-size: 16px;
+        width: 20px;
+        height: 20px;
+    }
+}

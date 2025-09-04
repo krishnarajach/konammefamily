@@ -1,0 +1,132 @@
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s;
+    overflow-y: auto; /* Allow scrolling if content is too long */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5vh auto; /* Use viewport height units */
+    padding: 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    animation: slideIn 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    max-height: 90vh; /* Maximum height to stay within viewport */
+    overflow-y: auto; /* Allow scrolling within modal if content is too long */
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+    z-index: 1001; /* Ensure close button is above everything */
+}
+
+.close:hover {
+    color: #333;
+}
+
+.modal-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+}
+
+/* Login Form */
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Form adjustments for modals */
+.modal-content .form-group {
+    margin-bottom: 15px;
+}
+
+.modal-content .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.modal-content .form-group input, 
+.modal-content .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.modal-content button {
+    background-color: #4a6baf;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #3a5a9f;
+}
+
+/* Responsive adjustments for modals */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 2vh auto;
+        padding: 15px;
+        max-height: 95vh;
+    }
+    
+    .modal-actions {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+    }
+    
+    .modal-actions button {
+        width: 100%; /* Full width buttons on small screens */
+        margin-bottom: 10px;
+    }
+    
+    .modal-actions button:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-height: 600px) {
+    .modal-content {
+        margin: 2vh auto;
+        padding: 15px;
+        max-height: 95vh;
+    }
+}
